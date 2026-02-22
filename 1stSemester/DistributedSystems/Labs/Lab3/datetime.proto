@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package datetime;
+
+service DateTime {
+  // Returns the current date and time
+  rpc GetCurrentDateTime (DateTimeRequest) returns (DateTimeResponse) {}
+}
+
+message DateTimeRequest {}
+
+message DateTimeResponse {
+  // The current date and time in ISO 8601 format
+  string datetime = 1;
+}

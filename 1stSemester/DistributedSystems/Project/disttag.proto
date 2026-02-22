@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package disttag;
+
+service GameMaster {
+  rpc JoinGame(PlayerInfo) returns (JoinResponse);
+  rpc ReportTag(TagEvent) returns (Ack);
+  rpc GetItPlayer(Empty) returns (ItInfo);
+}
+
+service RegionServer {
+  rpc Move(MoveRequest) returns (MoveResponse);
+  rpc AddPlayer(PlayerState) returns (Ack);
+  rpc RemovePlayer(PlayerId) returns (Ack);
+}
+
+message TransferPlayer {
+  int32 player_id = 1;
+  int32 x = 2;
+  int32 y = 3;
+  bool is_it = 4;
+}
+
+service RegionService {
+  rpc ReceivePlayer(TransferPlayer) returns (Empty);
+}
+
+message Empty {}
+
+message PlayerInfo {
+  string name = 1;
+}
+
+message JoinResponse {
+  string player_id = 1;
+  string region_addr = 2;
+  bool is_it = 3;
+}
+
+message ItInfo {
+  string player_id = 1;
+}
+
+message MoveRequest {
+  string player_id = 1;
+  int32 dx = 2;
+  int32 dy = 3;
+}
+
+message MoveResponse {
+  int32 x = 1;
+  int32 y = 2;
+  bool tagged = 3;
+}
+
+message PlayerState {
+  string player_id = 1;
+  int32 x = 2;
+  int32 y = 3;
+}
+
+message PlayerId {
+  string player_id = 1;
+}
+
+message TagEvent {
+  string tagger = 1;
+  string tagged = 2;
+}
+
+message Ack {
+  string status = 1;
+}
+
+

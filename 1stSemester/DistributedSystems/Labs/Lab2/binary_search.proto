@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package binarysearch;
+
+service BinarySearchService {
+  rpc BinarySearch (BinarySearchRequest) returns (BinarySearchResponse) {}
+}
+
+message BinarySearchRequest {
+  repeated int32 elements = 1;
+  int32 value = 2;
+}
+
+message BinarySearchResponse {
+  int32 index = 1;
+}

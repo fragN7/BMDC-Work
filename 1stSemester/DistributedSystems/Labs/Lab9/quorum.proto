@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package quorum;
+
+option go_package = "quorum";
+
+service Quorum {
+  rpc Write(Request) returns (Response) {}
+  rpc Read(Request) returns (Response) {}
+}
+
+message Request {
+  string key = 1;
+  string value = 2;
+}
+
+message Response {
+  bool success = 1;
+  string message = 2;
+  string value = 3;
+}

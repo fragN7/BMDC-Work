@@ -1,0 +1,309 @@
+index,predicted_evasion (base),predicted_evasion (large)
+0,General,General
+1,General,General
+2,General,Implicit
+3,Declining to answer,Implicit
+4,Explicit,Explicit
+5,Implicit,Explicit
+6,Dodging,Dodging
+7,Dodging,Dodging
+8,Explicit,Explicit
+9,Explicit,Explicit
+10,Dodging,Explicit
+11,Claims ignorance,Dodging
+12,Explicit,Explicit
+13,Explicit,Explicit
+14,Explicit,Explicit
+15,Explicit,Explicit
+16,Claims ignorance,Claims ignorance
+17,General,Dodging
+18,Implicit,General
+19,Explicit,Dodging
+20,Explicit,Implicit
+21,Explicit,Explicit
+22,Dodging,General
+23,Explicit,Implicit
+24,Explicit,Implicit
+25,Implicit,Implicit
+26,Explicit,Implicit
+27,Explicit,Implicit
+28,Dodging,Dodging
+29,Declining to answer,Dodging
+30,Implicit,General
+31,Explicit,Explicit
+32,General,Dodging
+33,Claims ignorance,Declining to answer
+34,Explicit,Explicit
+35,Dodging,Implicit
+36,Explicit,Dodging
+37,Explicit,Explicit
+38,Explicit,Explicit
+39,Deflection,Deflection
+40,Claims ignorance,Dodging
+41,Explicit,Implicit
+42,Explicit,Implicit
+43,Declining to answer,Declining to answer
+44,Implicit,Implicit
+45,General,Explicit
+46,Explicit,Explicit
+47,General,General
+48,Explicit,Explicit
+49,Claims ignorance,Claims ignorance
+50,Dodging,Explicit
+51,Explicit,Explicit
+52,Explicit,Explicit
+53,Explicit,Implicit
+54,Claims ignorance,Claims ignorance
+55,Explicit,Explicit
+56,Claims ignorance,Dodging
+57,Claims ignorance,Claims ignorance
+58,Deflection,General
+59,Dodging,Implicit
+60,Dodging,Dodging
+61,Explicit,Explicit
+62,Explicit,Explicit
+63,Explicit,Dodging
+64,Explicit,Dodging
+65,Explicit,Explicit
+66,Explicit,Explicit
+67,Explicit,Explicit
+68,Explicit,Dodging
+69,Explicit,Explicit
+70,Explicit,Explicit
+71,Claims ignorance,Claims ignorance
+72,Dodging,Dodging
+73,Explicit,Explicit
+74,Dodging,Dodging
+75,Explicit,Implicit
+76,Explicit,Explicit
+77,Implicit,Deflection
+78,Explicit,Dodging
+79,Explicit,Explicit
+80,Explicit,Implicit
+81,Dodging,Dodging
+82,Explicit,Deflection
+83,Claims ignorance,Declining to answer
+84,Claims ignorance,Claims ignorance
+85,Explicit,Explicit
+86,Dodging,Explicit
+87,Explicit,Explicit
+88,Claims ignorance,Dodging
+89,Implicit,Explicit
+90,Deflection,Explicit
+91,Dodging,Implicit
+92,Explicit,Explicit
+93,General,Explicit
+94,Declining to answer,Declining to answer
+95,Declining to answer,Dodging
+96,Dodging,Deflection
+97,Implicit,Dodging
+98,Explicit,Implicit
+99,Dodging,Dodging
+100,Declining to answer,Implicit
+101,Explicit,Explicit
+102,Explicit,Explicit
+103,Explicit,Explicit
+104,Explicit,Explicit
+105,Implicit,Implicit
+106,Dodging,Dodging
+107,Dodging,Dodging
+108,Claims ignorance,Claims ignorance
+109,Implicit,Explicit
+110,Explicit,Explicit
+111,Explicit,Deflection
+112,Declining to answer,Dodging
+113,Explicit,Explicit
+114,Explicit,Explicit
+115,General,Implicit
+116,General,Explicit
+117,Explicit,Explicit
+118,Implicit,Explicit
+119,Explicit,Explicit
+120,Explicit,Implicit
+121,Explicit,Explicit
+122,Explicit,Explicit
+123,Claims ignorance,Dodging
+124,Explicit,Explicit
+125,Explicit,Explicit
+126,Dodging,Dodging
+127,Explicit,Dodging
+128,Dodging,Dodging
+129,General,Implicit
+130,Dodging,Dodging
+131,Dodging,Declining to answer
+132,General,Implicit
+133,Explicit,Explicit
+134,Implicit,Implicit
+135,Explicit,Explicit
+136,Explicit,Explicit
+137,Implicit,Implicit
+138,Explicit,Dodging
+139,Deflection,General
+140,Explicit,Explicit
+141,Explicit,Explicit
+142,Explicit,Explicit
+143,Implicit,Implicit
+144,Dodging,Explicit
+145,Claims ignorance,Claims ignorance
+146,Explicit,Explicit
+147,Explicit,Explicit
+148,Explicit,Implicit
+149,Explicit,Explicit
+150,Explicit,Dodging
+151,Dodging,Dodging
+152,Dodging,Dodging
+153,Dodging,Dodging
+154,Explicit,Explicit
+155,Explicit,Explicit
+156,Dodging,Dodging
+157,Claims ignorance,Claims ignorance
+158,Explicit,Explicit
+159,Dodging,Implicit
+160,Explicit,Explicit
+161,Explicit,Dodging
+162,Dodging,Dodging
+163,Explicit,Implicit
+164,Explicit,Explicit
+165,Explicit,Explicit
+166,Dodging,Dodging
+167,Declining to answer,Clarification
+168,Dodging,Dodging
+169,Explicit,Explicit
+170,Dodging,Deflection
+171,Implicit,Deflection
+172,Claims ignorance,Dodging
+173,General,Implicit
+174,Explicit,Explicit
+175,Explicit,Explicit
+176,Explicit,Implicit
+177,General,General
+178,Explicit,Explicit
+179,Declining to answer,Declining to answer
+180,Explicit,Explicit
+181,Claims ignorance,Dodging
+182,Dodging,Explicit
+183,Claims ignorance,Dodging
+184,Explicit,Explicit
+185,Implicit,Dodging
+186,Declining to answer,Declining to answer
+187,Implicit,Implicit
+188,General,Dodging
+189,Implicit,Implicit
+190,Explicit,Implicit
+191,Implicit,Implicit
+192,Dodging,Dodging
+193,General,Explicit
+194,General,General
+195,Explicit,General
+196,Explicit,Explicit
+197,Deflection,Explicit
+198,Explicit,Dodging
+199,General,Implicit
+200,Explicit,Explicit
+201,Explicit,Implicit
+202,Explicit,Explicit
+203,Dodging,Dodging
+204,Implicit,Explicit
+205,Implicit,Explicit
+206,Explicit,Explicit
+207,Explicit,Implicit
+208,Dodging,Dodging
+209,Explicit,Explicit
+210,Dodging,Explicit
+211,Dodging,Deflection
+212,Explicit,Explicit
+213,Explicit,Explicit
+214,Explicit,Explicit
+215,Explicit,Dodging
+216,Dodging,Explicit
+217,Implicit,General
+218,Implicit,Dodging
+219,Dodging,Explicit
+220,Dodging,Dodging
+221,Implicit,Dodging
+222,Implicit,Dodging
+223,Explicit,Explicit
+224,Explicit,Dodging
+225,Dodging,Dodging
+226,Claims ignorance,Claims ignorance
+227,Implicit,General
+228,Claims ignorance,Dodging
+229,Explicit,Explicit
+230,Explicit,Explicit
+231,Dodging,Explicit
+232,Implicit,General
+233,General,General
+234,Explicit,Explicit
+235,Explicit,Explicit
+236,Explicit,Explicit
+237,Clarification,Clarification
+238,Dodging,Declining to answer
+239,General,Implicit
+240,Declining to answer,Declining to answer
+241,Explicit,Explicit
+242,Explicit,Explicit
+243,Explicit,Explicit
+244,General,Implicit
+245,Explicit,Implicit
+246,Dodging,Dodging
+247,Explicit,Explicit
+248,General,General
+249,Explicit,Explicit
+250,Claims ignorance,Dodging
+251,Explicit,Explicit
+252,Explicit,Implicit
+253,Implicit,Explicit
+254,Declining to answer,Clarification
+255,Explicit,Explicit
+256,Explicit,Dodging
+257,Implicit,Explicit
+258,Claims ignorance,Declining to answer
+259,Explicit,Explicit
+260,Explicit,Explicit
+261,Implicit,Explicit
+262,Implicit,Implicit
+263,Claims ignorance,Claims ignorance
+264,Dodging,Implicit
+265,Declining to answer,Declining to answer
+266,Implicit,Dodging
+267,Explicit,Explicit
+268,Explicit,Explicit
+269,Dodging,Explicit
+270,Explicit,Explicit
+271,Claims ignorance,Claims ignorance
+272,Deflection,Dodging
+273,Implicit,Implicit
+274,Explicit,Explicit
+275,Deflection,Deflection
+276,Claims ignorance,Declining to answer
+277,General,Implicit
+278,Explicit,General
+279,Explicit,Explicit
+280,Deflection,General
+281,Explicit,Explicit
+282,Explicit,Explicit
+283,Explicit,Explicit
+284,Explicit,Explicit
+285,Dodging,Dodging
+286,Claims ignorance,Dodging
+287,Dodging,Explicit
+288,Deflection,Deflection
+289,Dodging,Explicit
+290,Dodging,Dodging
+291,Explicit,Explicit
+292,Explicit,Explicit
+293,Explicit,Explicit
+294,Dodging,Explicit
+295,Dodging,Implicit
+296,Explicit,Explicit
+297,Declining to answer,Clarification
+298,Explicit,Explicit
+299,Explicit,Explicit
+300,Clarification,Clarification
+301,Deflection,General
+302,Explicit,Explicit
+303,Deflection,Explicit
+304,Explicit,Explicit
+305,Explicit,Explicit
+306,Explicit,Explicit
+307,Dodging,Dodging

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service SensorService {
+  rpc SendReadings (stream SensorData) returns (Summary);
+}
+
+message SensorData {
+  float value = 1;
+}
+
+message Summary {
+  float average = 1;
+  float min = 2;
+  float max = 3;
+}

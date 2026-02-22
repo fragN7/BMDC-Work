@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+service ExampleService {
+  rpc GetMessage(Name) returns (Message) {}
+  rpc SendMessage(Message) returns (Result) {}
+}
+
+message Name {
+  string name = 1;
+}
+
+message Message {
+  string text = 1;
+}
+
+message Result {
+  bool success = 1;
+}

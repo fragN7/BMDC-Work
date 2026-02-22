@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service PrimeService {
+  rpc CheckPrime (PrimeRequest) returns (PrimeResponse);
+}
+
+message PrimeRequest {
+  int64 number = 1;
+}
+
+message PrimeResponse {
+  bool is_prime = 1;
+  int64 number = 2;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package lamportclock;
+
+service LamportClock {
+  rpc Request(ResourceRequest) returns (ResourceReply) {}
+  rpc Release(ResourceRelease) returns (Empty) {}
+}
+
+message ResourceRequest {
+  string process_id = 1;
+  int64 timestamp = 2;
+}
+
+message ResourceReply {
+  bool granted = 1;
+  repeated ResourceRequest waiting = 2;
+}
+
+message ResourceRelease {
+  string process_id = 1;
+  int64 timestamp = 2;
+}
+
+message Empty {}

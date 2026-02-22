@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service RingElection {
+  rpc StartElection(ElectionMessage) returns (ElectionResult) {}
+}
+
+message ElectionMessage {
+  int32 sender_id = 1;
+  int32 election_id = 2;
+}
+
+message ElectionResult {
+  int32 leader_id = 1;
+  bool success = 2;
+}
