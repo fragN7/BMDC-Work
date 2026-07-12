@@ -1,0 +1,11 @@
+Flow sensing  size=   1200: devi<0.02 by round 18, final devi=0.0056, ground truth=0.5079
+Flow sensing  size=  12000: devi<0.02 by round 19, final devi=0.0050, ground truth=0.4984
+Flow sensing  size= 120000: devi<0.02 by round 18, final devi=0.0050, ground truth=0.4999
+Rerouting     size=   1200: overCap 23.8%->0.3%, peakLoad=0.77, lockups=0, arrived=954, divertShare=23.4%, avgHops=5.97
+Rerouting     size=  12000: overCap 23.3%->0.3%, peakLoad=0.77, lockups=0, arrived=9429, divertShare=25.4%, avgHops=6.19
+Rerouting     size= 120000: overCap 23.1%->0.3%, peakLoad=0.77, lockups=0, arrived=94371, divertShare=24.9%, avgHops=6.18
+Disruption  1%: settled devi ~ 0.0251 (mean tracks ground truth = 0.5001)
+Disruption  2%: settled devi ~ 0.0339 (mean tracks ground truth = 0.5006)
+Disruption  5%: settled devi ~ 0.0516 (mean tracks ground truth = 0.5007)
+Disruption 10%: settled devi ~ 0.0676 (mean tracks ground truth = 0.4983)
+Disruption 20%: settled devi ~ 0.0874 (mean tracks ground truth = 0.4993)

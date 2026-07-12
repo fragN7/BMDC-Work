@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sports KG Query Console</title>
+<style>
+  :root {
+    --ink:#1b2430; --paper:#f7f5f0; --line:#d8d3c7;
+    --pitch:#1e5631; --pitch-light:#e8f0e9; --card:#ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; font-family: 'Courier New', Courier, monospace;
+    background: var(--paper); color: var(--ink);
+    padding: 32px 24px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 22px; letter-spacing: 0.5px; margin: 0 0 4px; }
+  .sub { color:#5c6570; font-size:13px; margin-bottom:24px; }
+  .card {
+    background: var(--card); border:1px solid var(--line);
+    border-radius: 6px; padding:20px; margin-bottom:20px;
+  }
+  label { display:block; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:#5c6570; margin-bottom:6px; }
+  select, textarea, input {
+    width:100%; font-family: inherit; font-size:13px;
+    border:1px solid var(--line); border-radius:4px; padding:8px;
+    background:#fcfbf8; color:var(--ink);
+  }
+  textarea { min-height:150px; resize:vertical; }
+  .row { display:flex; gap:16px; margin-bottom:14px; flex-wrap:wrap; }
+  .row > div { flex:1; min-width:220px; }
+  button {
+    background: var(--pitch); color:#fff; border:none; border-radius:4px;
+    padding:10px 18px; font-size:13px; font-weight:bold; cursor:pointer;
+    letter-spacing:0.04em;
+  }
+  button:hover { opacity:0.9; }
+  button:disabled { opacity:0.5; cursor:not-allowed; }
+  #status { font-size:12px; margin-top:10px; color:#5c6570; }
+  #status.err { color:#a1332c; }
+  table { border-collapse: collapse; width:100%; font-size:13px; }
+  th, td { border:1px solid var(--line); padding:6px 10px; text-align:left; }
+  th { background: var(--pitch-light); }
+  pre {
+    background:#0f1a13; color:#d4e8d8; padding:14px; border-radius:4px;
+    overflow-x:auto; font-size:12.5px; white-space:pre-wrap; word-break:break-word;
+  }
+  .ask-result { font-size:32px; font-weight:bold; padding:14px 0; }
+  .ask-true { color: var(--pitch); }
+  .ask-false { color:#a1332c; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>⚽ Sports KG Query Console</h1>
+  <div class="sub">Talks directly to GraphDB's SPARQL REST endpoint. No LLM involved.</div>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label>GraphDB endpoint</label>
+        <input id="endpoint" value="http://localhost:7200/repositories/sports-kg" />
+      </div>
+      <div>
+        <label>Query type</label>
+        <select id="queryType">
+          <option value="SELECT">SELECT</option>
+          <option value="ASK">ASK</option>
+          <option value="DESCRIBE">DESCRIBE</option>
+          <option value="CONSTRUCT">CONSTRUCT</option>
+        </select>
+      </div>
+    </div>
+
+    <label>SPARQL query</label>
+    <textarea id="query">PREFIX ex: &lt;http://example.org/sportskg#&gt;
+
+SELECT ?playerName ?clubName ?agentName WHERE {
+    ?player a ex:Player ;
+            ex:name ?playerName ;
+            ex:playsFor ?club ;
+            ex:hasAgent ?agent .
+    ?club  ex:name ?clubName .
+    ?agent ex:name ?agentName .
+}
+ORDER BY ?clubName ?playerName</textarea>
+
+    <div style="margin-top:14px;">
+      <button id="runBtn" onclick="runQuery()">Run query</button>
+    </div>
+    <div id="status"></div>
+  </div>
+
+  <div class="card">
+    <label>Result</label>
+    <div id="result">— nothing yet —</div>
+  </div>
+</div>
+
+<script>
+const PRESETS = {
+  SELECT: `PREFIX ex: <http://example.org/sportskg#>
+
+SELECT ?playerName ?clubName ?agentName WHERE {
+    ?player a ex:Player ;
+            ex:name ?playerName ;
+            ex:playsFor ?club ;
+            ex:hasAgent ?agent .
+    ?club  ex:name ?clubName .
+    ?agent ex:name ?agentName .
+}
+ORDER BY ?clubName ?playerName`,
+  ASK: `PREFIX ex: <http://example.org/sportskg#>
+
+ASK {
+    ?player a ex:Player ;
+            ex:playsFor ?club .
+    ?club ex:foundedYear ?year .
+    FILTER (?year < 1920)
+}`,
+  DESCRIBE: `PREFIX ex: <http://example.org/sportskg#>
+PREFIX data: <http://example.org/sportskg/data#>
+
+DESCRIBE data:P009`,
+  CONSTRUCT: `PREFIX ex: <http://example.org/sportskg#>
+
+CONSTRUCT {
+    ?process ex:transferInvolvesPlayer ?player .
+    ?process ex:transferInvolvesAgent ?agent .
+    ?process ex:transferFromClub ?fromClub .
+    ?process ex:transferToClub ?toClub .
+}
+WHERE {
+    ?process a ex:TransferProcess ;
+             ex:involvesPlayer ?player ;
+             ex:fromClub ?fromClub ;
+             ex:toClub ?toClub .
+    ?player ex:hasAgent ?agent .
+}`
+};
+
+document.getElementById('queryType').addEventListener('change', (e) => {
+  document.getElementById('query').value = PRESETS[e.target.value];
+});
+
+function setStatus(msg, isErr) {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  el.className = isErr ? 'err' : '';
+}
+
+function acceptHeaderFor(type) {
+  if (type === 'SELECT' || type === 'ASK') return 'application/sparql-results+json';
+  return 'text/turtle'; // DESCRIBE / CONSTRUCT
+}
+
+async function runQuery() {
+  const endpoint = document.getElementById('endpoint').value.trim();
+  const type = document.getElementById('queryType').value;
+  const query = document.getElementById('query').value;
+  const btn = document.getElementById('runBtn');
+  const resultDiv = document.getElementById('result');
+
+  btn.disabled = true;
+  setStatus('Running…');
+  resultDiv.innerHTML = '';
+
+  try {
+    const resp = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': acceptHeaderFor(type)
+      },
+      body: 'query=' + encodeURIComponent(query)
+    });
+
+    if (!resp.ok) {
+      const text = await resp.text();
+      throw new Error(`HTTP ${resp.status}: ${text.slice(0, 400)}`);
+    }
+
+    if (type === 'SELECT') {
+      const data = await resp.json();
+      renderTable(data);
+    } else if (type === 'ASK') {
+      const data = await resp.json();
+      renderAsk(data.boolean);
+    } else {
+      const text = await resp.text();
+      renderTurtle(text);
+    }
+
+    setStatus('Done — ' + new Date().toLocaleTimeString());
+  } catch (err) {
+    setStatus(err.message, true);
+    resultDiv.innerHTML = '<pre>' + err.message + '</pre>';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function renderTable(data) {
+  const vars = data.head.vars;
+  const rows = data.results.bindings;
+  if (rows.length === 0) {
+    document.getElementById('result').innerHTML = '<i>No results.</i>';
+    return;
+  }
+  let html = '<table><thead><tr>' + vars.map(v => `<th>${v}</th>`).join('') + '</tr></thead><tbody>';
+  for (const row of rows) {
+    html += '<tr>' + vars.map(v => `<td>${row[v] ? row[v].value : ''}</td>`).join('') + '</tr>';
+  }
+  html += '</tbody></table>';
+  document.getElementById('result').innerHTML = html;
+}
+
+function renderAsk(bool) {
+  document.getElementById('result').innerHTML =
+    `<div class="ask-result ${bool ? 'ask-true' : 'ask-false'}">${bool ? 'TRUE' : 'FALSE'}</div>`;
+}
+
+function renderTurtle(text) {
+  document.getElementById('result').innerHTML = '<pre></pre>';
+  document.getElementById('result').querySelector('pre').textContent = text;
+}
+</script>
+</body>
+</html>

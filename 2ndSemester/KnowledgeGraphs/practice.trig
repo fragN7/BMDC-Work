@@ -1,0 +1,917 @@
+@prefix mm:    <http://bee-up.omilab.org/rdf/1_7#> .
+@prefix cv:    <http://www.comvantage.eu/mm#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix omi:   <http://www.omilab.org/#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+cv:graphmetadata {
+    <http://www.omilab.org/example#Business_Process_Diagram_BPMN_2_0-Practice>
+            a                            cv:m_Model , mm:m_Business_Process_Diagram_BPMN_2_0 ;
+            rdfs:label                   "Practice" ;
+            mm:a_Auditing                "No" ;
+            mm:a_Closed                  "No" ;
+            mm:a_Executable              "No" ;
+            mm:a_Font_size               "0" ;
+            mm:a_Grayscale_mode          "0" ;
+            mm:a_Model_type              "Current model" ;
+            mm:a_Monitoring              "No" ;
+            mm:a_Name                    "Practice" ;
+            mm:a_Process_type            "None" ;
+            mm:a_Project_phase           "Analysis" ;
+            mm:a_State                   "In process" ;
+            mm:a_Type                    "Business Process Diagram (BPMN 2.0)" ;
+            mm:a_Visualize_links_to_DMN  "yes" ;
+            cv:a_Name                    "Practice" ;
+            cv:a_Version                 "" ;
+            cv:a_libtype                 "bp" .
+}
+
+<http://www.omilab.org/example#Business_Process_Diagram_BPMN_2_0-Practice> {
+    <http://www.omilab.org/example#Task_BPMN-12850-T3>
+            a                               mm:o_Task_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "T3" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Average_number_of_participants
+                    "1" ;
+            mm:a_Continuous_execution       "no" ;
+            mm:a_Cooperation_mode           "synchron" ;
+            mm:a_Cooperative                "no" ;
+            mm:a_Costs                      "0" ;
+            mm:a_Execution_interruptable    "yes" ;
+            mm:a_Execution_time             "00:000:00:00:00" ;
+            mm:a_For_compensation           "No" ;
+            mm:a_Global_task                "No" ;
+            mm:a_Instantiate                "No" ;
+            mm:a_Loop_type                  "Not specified" ;
+            mm:a_Max__resource_waiting_time
+                    "00:000:00:05:00" ;
+            mm:a_Max__start_period          "00:001:00:00:00" ;
+            mm:a_Min__quota_of_presence     "100" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Number                     "0" ;
+            mm:a_Order                      "0" ;
+            mm:a_Performer                  "EXPR expr:(\"\") val:\"\"" ;
+            mm:a_Position                   "NODE x:12.25cm y:8.5cm w:3cm h:1.6cm index:9" ;
+            mm:a_Priority                   "10" ;
+            mm:a_Resting_time               "00:000:00:00:00" ;
+            mm:a_Sequential_execution       "No" ;
+            mm:a_Show_name                  "inside" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Task_stack                 "personal" ;
+            mm:a_Task_type                  "Not specified" ;
+            mm:a_Transport_time             "00:000:00:00:00" ;
+            mm:a_Waiting_time               "00:000:00:00:00" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12850" ;
+            mm:a_vizDmnLink                 "EXPR val:\"yes\"" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                       "T3" .
+    
+    <http://www.omilab.org/example#End_Event_BPMN-12878-e3>
+            a                            mm:o_End_Event_BPMN , cv:o_Modelling_object ;
+            rdfs:label                   "e3" ;
+            mm:a_Auditing                "No" ;
+            mm:a_Cancel                  "No" ;
+            mm:a_Collection              "No" ;
+            mm:a_Compensation            "No" ;
+            mm:a_Error                   "No" ;
+            mm:a_Escalation              "Yes" ;
+            mm:a_Message                 "No" ;
+            mm:a_Monitoring              "No" ;
+            mm:a_Object_type             "Information" ;
+            mm:a_Order                   "0" ;
+            mm:a_Position                "NODE x:19.75cm y:10.5cm index:16" ;
+            mm:a_Show_name               "no" ;
+            mm:a_Signal                  "No" ;
+            mm:a_Sort_custom_attributes  "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Terminate               "No" ;
+            mm:a_Type                    "local" ;
+            mm:a_fontcolor               "EXPR val:\"black\"" ;
+            mm:a_objectid                "EXPR val:12878" ;
+            mm:a_vizGrayscaleMode        "EXPR val:0" ;
+            mm:r_Is_inside               <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                    "e3" .
+    
+    <http://www.omilab.org/example#Task_BPMN-12858-T5>
+            a                               cv:o_Modelling_object , mm:o_Task_BPMN ;
+            rdfs:label                      "T5" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Average_number_of_participants
+                    "1" ;
+            mm:a_Continuous_execution       "no" ;
+            mm:a_Cooperation_mode           "synchron" ;
+            mm:a_Cooperative                "no" ;
+            mm:a_Costs                      "0" ;
+            mm:a_Execution_interruptable    "yes" ;
+            mm:a_Execution_time             "00:000:00:00:00" ;
+            mm:a_For_compensation           "No" ;
+            mm:a_Global_task                "No" ;
+            mm:a_Instantiate                "No" ;
+            mm:a_Loop_type                  "Not specified" ;
+            mm:a_Max__resource_waiting_time
+                    "00:000:00:05:00" ;
+            mm:a_Max__start_period          "00:001:00:00:00" ;
+            mm:a_Min__quota_of_presence     "100" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Number                     "0" ;
+            mm:a_Order                      "0" ;
+            mm:a_Performer                  "EXPR expr:(\"\") val:\"\"" ;
+            mm:a_Position                   "NODE x:16.25cm y:10.5cm w:3cm h:1.6cm index:11" ;
+            mm:a_Priority                   "10" ;
+            mm:a_Resting_time               "00:000:00:00:00" ;
+            mm:a_Sequential_execution       "No" ;
+            mm:a_Show_name                  "inside" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Task_stack                 "personal" ;
+            mm:a_Task_type                  "Not specified" ;
+            mm:a_Transport_time             "00:000:00:00:00" ;
+            mm:a_Waiting_time               "00:000:00:00:00" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12858" ;
+            mm:a_vizDmnLink                 "EXPR val:\"yes\"" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                       "T5" .
+    
+    <http://www.omilab.org/example#End_Event_BPMN-12866-End_Event_BPMN-12866>
+            a                            cv:o_Modelling_object , mm:o_End_Event_BPMN ;
+            rdfs:label                   "End Event (BPMN)-12866" ;
+            mm:a_Auditing                "No" ;
+            mm:a_Cancel                  "No" ;
+            mm:a_Collection              "No" ;
+            mm:a_Compensation            "No" ;
+            mm:a_Error                   "No" ;
+            mm:a_Escalation              "No" ;
+            mm:a_Message                 "No" ;
+            mm:a_Monitoring              "No" ;
+            mm:a_Object_type             "Information" ;
+            mm:a_Order                   "0" ;
+            mm:a_Position                "NODE x:13.25cm y:4cm index:13" ;
+            mm:a_Show_name               "no" ;
+            mm:a_Signal                  "No" ;
+            mm:a_Sort_custom_attributes  "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Terminate               "No" ;
+            mm:a_Type                    "local" ;
+            mm:a_fontcolor               "EXPR val:\"black\"" ;
+            mm:a_objectid                "EXPR val:12866" ;
+            mm:a_vizGrayscaleMode        "EXPR val:0" ;
+            mm:r_Is_inside               <http://www.omilab.org/example#Pool_BPMN-12821-Collaborator> ;
+            cv:a_Name                    "End Event (BPMN)-12866" .
+    
+    <http://www.omilab.org/example#End_Event_BPMN-12874-End_Event_BPMN-12874>
+            a                            mm:o_End_Event_BPMN , cv:o_Modelling_object ;
+            rdfs:label                   "End Event (BPMN)-12874" ;
+            mm:a_Auditing                "No" ;
+            mm:a_Cancel                  "No" ;
+            mm:a_Collection              "No" ;
+            mm:a_Compensation            "No" ;
+            mm:a_Error                   "No" ;
+            mm:a_Escalation              "No" ;
+            mm:a_Message                 "No" ;
+            mm:a_Monitoring              "No" ;
+            mm:a_Object_type             "Information" ;
+            mm:a_Order                   "0" ;
+            mm:a_Position                "NODE x:16cm y:15.25cm index:15" ;
+            mm:a_Show_name               "no" ;
+            mm:a_Signal                  "No" ;
+            mm:a_Sort_custom_attributes  "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Terminate               "No" ;
+            mm:a_Type                    "local" ;
+            mm:a_fontcolor               "EXPR val:\"black\"" ;
+            mm:a_objectid                "EXPR val:12874" ;
+            mm:a_vizGrayscaleMode        "EXPR val:0" ;
+            mm:r_Is_inside               <http://www.omilab.org/example#Pool_BPMN-12827-Author> ;
+            cv:a_Name                    "End Event (BPMN)-12874" .
+    
+    <http://www.omilab.org/example#Start_Event_BPMN-12834-Start_Event_BPMN-12834>
+            a                               mm:o_Start_Event_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "Start Event (BPMN)-12834" ;
+            mm:a_Abandon_after_tolerance_waiting_time
+                    "no" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_cycle_time      "00:000:00:00:00" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Collection                 "No" ;
+            mm:a_Compensation               "No" ;
+            mm:a_Conditional                "No" ;
+            mm:a_Error                      "No" ;
+            mm:a_Escalation                 "No" ;
+            mm:a_Message                    "No" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Object_type                "Information" ;
+            mm:a_Order                      "0" ;
+            mm:a_Parallel                   "No" ;
+            mm:a_Position                   "NODE x:3.5cm y:9.75cm index:5" ;
+            mm:a_Process_calendar           "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb" ;
+            mm:a_Quantity                   "EXPR expr:(0) val:0" ;
+            mm:a_Show_name                  "no" ;
+            mm:a_Signal                     "No" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Time_period                "Per year" ;
+            mm:a_Timer                      "No" ;
+            mm:a_Tolerance_waiting_time     "00:000:00:00:00" ;
+            mm:a_Type                       "Top-level" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12834" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                       "Start Event (BPMN)-12834" .
+    
+    <http://www.omilab.org/example#Subsequent-12902-Decision_D-T4>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Exclusive Gateway (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:27" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Exclusive_Gateway_BPMN-12881-Decision_D> ;
+            cv:to                           <http://www.omilab.org/example#Task_BPMN-12854-T4> .
+    
+    <http://www.omilab.org/example#Subsequent-12899-Start_Event_BPMN-12834-T2>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Start Event (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:24" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Start_Event_BPMN-12834-Start_Event_BPMN-12834> ;
+            cv:to                           <http://www.omilab.org/example#Task_BPMN-12891-T2> .
+    
+    <http://www.omilab.org/example#Subsequent-12903-T3-e2>
+            a                               cv:r_Modelling_relation_a , mm:r_Subsequent ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:28" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"End Event (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12850-T3> ;
+            cv:to                           <http://www.omilab.org/example#End_Event_BPMN-12870-e2> .
+    
+    <http://www.omilab.org/example#Pool_BPMN-12824-Publisher>
+            a                               cv:o_Modelling_object , mm:o_Pool_BPMN ;
+            rdfs:label                      "Publisher" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Border_visible             "yes" ;
+            mm:a_Closed                     "No" ;
+            mm:a_Color                      "white" ;
+            mm:a_Executable                 "No" ;
+            mm:a_Fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Orientation                "horizontal" ;
+            mm:a_Position                   "NODE x:1.5cm y:7.5cm w:19.5cm h:4.25cm index:2" ;
+            mm:a_Process_type               "None" ;
+            mm:a_Rotate_text_by_90_degrees  "yes" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12824" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            cv:a_Name                       "Publisher" .
+    
+    <http://www.omilab.org/example#Message_Flow_BPMN-12889-T3-Collaborator>
+            a                               cv:r_Modelling_relation_a , mm:r_Message_Flow_BPMN ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Positions                  "EDGE 0 index:22" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Show_denomination          "no" ;
+            mm:a_ToType                     "EXPR val:\"Pool (BPMN)\"" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12850-T3> ;
+            cv:to                           <http://www.omilab.org/example#Pool_BPMN-12821-Collaborator> .
+    
+    <http://www.omilab.org/example#Intermediate_Event_BPMN-12862-Intermediate_Event_BPMN-12862>
+            a                            mm:o_Intermediate_Event_BPMN , cv:o_Modelling_object ;
+            rdfs:label                   "Intermediate Event (BPMN)-12862" ;
+            mm:a_Auditing                "No" ;
+            mm:a_Cancel                  "No" ;
+            mm:a_Cancel_activity         "No" ;
+            mm:a_Collection              "No" ;
+            mm:a_Compensation            "No" ;
+            mm:a_Conditional             "No" ;
+            mm:a_Error                   "No" ;
+            mm:a_Escalation              "No" ;
+            mm:a_Link                    "No" ;
+            mm:a_Message                 "No" ;
+            mm:a_Monitoring              "No" ;
+            mm:a_Object_type             "Information" ;
+            mm:a_Order                   "0" ;
+            mm:a_Parallel                "No" ;
+            mm:a_Position                "NODE x:10cm y:15.25cm index:12" ;
+            mm:a_Show_name               "no" ;
+            mm:a_Signal                  "No" ;
+            mm:a_Sort_custom_attributes  "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Timer                   "No" ;
+            mm:a_Type_boundary           "non-interrupting" ;
+            mm:a_Type_sequence           "throwing" ;
+            mm:a_fontcolor               "EXPR val:\"black\"" ;
+            mm:a_objectid                "EXPR val:12862" ;
+            mm:a_vizGrayscaleMode        "EXPR val:0" ;
+            mm:r_Is_inside               <http://www.omilab.org/example#Pool_BPMN-12827-Author> ;
+            cv:a_Name                    "Intermediate Event (BPMN)-12862" .
+    
+    <http://www.omilab.org/example#Task_BPMN-12891-T2>
+            a                               mm:o_Task_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "T2" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Average_number_of_participants
+                    "1" ;
+            mm:a_Continuous_execution       "no" ;
+            mm:a_Cooperation_mode           "synchron" ;
+            mm:a_Cooperative                "no" ;
+            mm:a_Costs                      "0" ;
+            mm:a_Execution_interruptable    "yes" ;
+            mm:a_Execution_time             "00:000:00:00:00" ;
+            mm:a_For_compensation           "No" ;
+            mm:a_Global_task                "No" ;
+            mm:a_Instantiate                "No" ;
+            mm:a_Loop_type                  "Not specified" ;
+            mm:a_Max__resource_waiting_time
+                    "00:000:00:05:00" ;
+            mm:a_Max__start_period          "00:001:00:00:00" ;
+            mm:a_Min__quota_of_presence     "100" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Number                     "0" ;
+            mm:a_Order                      "0" ;
+            mm:a_Performer                  "EXPR expr:(\"\") val:\"\"" ;
+            mm:a_Position                   "NODE x:6cm y:10cm w:3cm h:1.6cm index:23" ;
+            mm:a_Priority                   "10" ;
+            mm:a_Resting_time               "00:000:00:00:00" ;
+            mm:a_Sequential_execution       "No" ;
+            mm:a_Show_name                  "inside" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Task_stack                 "personal" ;
+            mm:a_Task_type                  "Not specified" ;
+            mm:a_Transport_time             "00:000:00:00:00" ;
+            mm:a_Waiting_time               "00:000:00:00:00" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12891" ;
+            mm:a_vizDmnLink                 "EXPR val:\"yes\"" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                       "T2" .
+    
+    <http://www.omilab.org/example#Subsequent-12886-T1-End_Event_BPMN-12866>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:19" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"End Event (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12846-T1> ;
+            cv:to                           <http://www.omilab.org/example#End_Event_BPMN-12866-End_Event_BPMN-12866> .
+    
+    <http://www.omilab.org/example#Pool_BPMN-12827-Author>
+            a                               mm:o_Pool_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "Author" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Border_visible             "yes" ;
+            mm:a_Closed                     "No" ;
+            mm:a_Color                      "white" ;
+            mm:a_Executable                 "No" ;
+            mm:a_Fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Orientation                "horizontal" ;
+            mm:a_Position                   "NODE x:3.25cm y:12.75cm w:15cm h:4cm index:3" ;
+            mm:a_Process_type               "None" ;
+            mm:a_Rotate_text_by_90_degrees  "yes" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12827" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            cv:a_Name                       "Author" .
+    
+    <http://www.omilab.org/example#Task_BPMN-12846-T1>
+            a                               mm:o_Task_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "T1" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Average_number_of_participants
+                    "1" ;
+            mm:a_Continuous_execution       "no" ;
+            mm:a_Cooperation_mode           "synchron" ;
+            mm:a_Cooperative                "no" ;
+            mm:a_Costs                      "0" ;
+            mm:a_Execution_interruptable    "yes" ;
+            mm:a_Execution_time             "00:000:00:00:00" ;
+            mm:a_For_compensation           "No" ;
+            mm:a_Global_task                "No" ;
+            mm:a_Instantiate                "No" ;
+            mm:a_Loop_type                  "Not specified" ;
+            mm:a_Max__resource_waiting_time
+                    "00:000:00:05:00" ;
+            mm:a_Max__start_period          "00:001:00:00:00" ;
+            mm:a_Min__quota_of_presence     "100" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Number                     "0" ;
+            mm:a_Order                      "0" ;
+            mm:a_Performer                  "EXPR expr:(\"\") val:\"\"" ;
+            mm:a_Position                   "NODE x:9.25cm y:4cm w:3cm h:1.6cm index:8" ;
+            mm:a_Priority                   "10" ;
+            mm:a_Resting_time               "00:000:00:00:00" ;
+            mm:a_Sequential_execution       "No" ;
+            mm:a_Show_name                  "inside" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Task_stack                 "personal" ;
+            mm:a_Task_type                  "Not specified" ;
+            mm:a_Transport_time             "00:000:00:00:00" ;
+            mm:a_Waiting_time               "00:000:00:00:00" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12846" ;
+            mm:a_vizDmnLink                 "EXPR val:\"yes\"" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12821-Collaborator> ;
+            cv:a_Name                       "T1" .
+    
+    <http://www.omilab.org/example#Task_BPMN-12854-T4>
+            a                               cv:o_Modelling_object , mm:o_Task_BPMN ;
+            rdfs:label                      "T4" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Average_number_of_participants
+                    "1" ;
+            mm:a_Continuous_execution       "no" ;
+            mm:a_Cooperation_mode           "synchron" ;
+            mm:a_Cooperative                "no" ;
+            mm:a_Costs                      "0" ;
+            mm:a_Execution_interruptable    "yes" ;
+            mm:a_Execution_time             "00:000:00:00:00" ;
+            mm:a_For_compensation           "No" ;
+            mm:a_Global_task                "No" ;
+            mm:a_Instantiate                "No" ;
+            mm:a_Loop_type                  "Not specified" ;
+            mm:a_Max__resource_waiting_time
+                    "00:000:00:05:00" ;
+            mm:a_Max__start_period          "00:001:00:00:00" ;
+            mm:a_Min__quota_of_presence     "100" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Number                     "0" ;
+            mm:a_Order                      "0" ;
+            mm:a_Performer                  "EXPR expr:(\"\") val:\"\"" ;
+            mm:a_Position                   "NODE x:12cm y:10.75cm w:3cm h:1.6cm index:10" ;
+            mm:a_Priority                   "10" ;
+            mm:a_Resting_time               "00:000:00:00:00" ;
+            mm:a_Sequential_execution       "No" ;
+            mm:a_Show_name                  "inside" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Task_stack                 "personal" ;
+            mm:a_Task_type                  "Not specified" ;
+            mm:a_Transport_time             "00:000:00:00:00" ;
+            mm:a_Waiting_time               "00:000:00:00:00" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12854" ;
+            mm:a_vizDmnLink                 "EXPR val:\"yes\"" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                       "T4" .
+    
+    <http://www.omilab.org/example#Subsequent-12901-Decision_D-T3>
+            a                               cv:r_Modelling_relation_a , mm:r_Subsequent ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Exclusive Gateway (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:26" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Exclusive_Gateway_BPMN-12881-Decision_D> ;
+            cv:to                           <http://www.omilab.org/example#Task_BPMN-12850-T3> .
+    
+    <http://www.omilab.org/example#Subsequent-12908-Intermediate_Event_BPMN-12862-End_Event_BPMN-12874>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Intermediate Event (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:32" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"End Event (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Intermediate_Event_BPMN-12862-Intermediate_Event_BPMN-12862> ;
+            cv:to                           <http://www.omilab.org/example#End_Event_BPMN-12874-End_Event_BPMN-12874> .
+    
+    <http://www.omilab.org/example#Pool_BPMN-12821-Collaborator>
+            a                               cv:o_Modelling_object , mm:o_Pool_BPMN ;
+            rdfs:label                      "Collaborator" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Border_visible             "yes" ;
+            mm:a_Closed                     "No" ;
+            mm:a_Color                      "white" ;
+            mm:a_Executable                 "No" ;
+            mm:a_Fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Orientation                "horizontal" ;
+            mm:a_Position                   "NODE x:3cm y:2.25cm w:15cm h:4cm index:1" ;
+            mm:a_Process_type               "None" ;
+            mm:a_Rotate_text_by_90_degrees  "yes" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12821" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            cv:a_Name                       "Collaborator" .
+    
+    <http://www.omilab.org/example#Subsequent-12907-Start_Event_BPMN-12838-Intermediate_Event_BPMN-12862>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Start Event (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:31" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Intermediate Event (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Start_Event_BPMN-12838-Start_Event_BPMN-12838> ;
+            cv:to                           <http://www.omilab.org/example#Intermediate_Event_BPMN-12862-Intermediate_Event_BPMN-12862> .
+    
+    <http://www.omilab.org/example#Start_Event_BPMN-12830-Start_Event_BPMN-12830>
+            a                               mm:o_Start_Event_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "Start Event (BPMN)-12830" ;
+            mm:a_Abandon_after_tolerance_waiting_time
+                    "no" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_cycle_time      "00:000:00:00:00" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Collection                 "No" ;
+            mm:a_Compensation               "No" ;
+            mm:a_Conditional                "No" ;
+            mm:a_Error                      "No" ;
+            mm:a_Escalation                 "No" ;
+            mm:a_Message                    "No" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Object_type                "Information" ;
+            mm:a_Order                      "0" ;
+            mm:a_Parallel                   "No" ;
+            mm:a_Position                   "NODE x:6cm y:4cm index:4" ;
+            mm:a_Process_calendar           "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb" ;
+            mm:a_Quantity                   "EXPR expr:(0) val:0" ;
+            mm:a_Show_name                  "no" ;
+            mm:a_Signal                     "No" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Time_period                "Per year" ;
+            mm:a_Timer                      "No" ;
+            mm:a_Tolerance_waiting_time     "00:000:00:00:00" ;
+            mm:a_Type                       "Top-level" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12830" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12821-Collaborator> ;
+            cv:a_Name                       "Start Event (BPMN)-12830" .
+    
+    <http://www.omilab.org/example#Subsequent-12905-T5-e3>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:30" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"End Event (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12858-T5> ;
+            cv:to                           <http://www.omilab.org/example#End_Event_BPMN-12878-e3> .
+    
+    <http://www.omilab.org/example#Exclusive_Gateway_BPMN-12881-Decision_D>
+            a                            mm:o_Exclusive_Gateway_BPMN , cv:o_Modelling_object ;
+            rdfs:label                   "Decision D" ;
+            mm:a_Gateway_type            "Data-based (without marker)" ;
+            mm:a_Order                   "0" ;
+            mm:a_Position                "NODE x:9.25cm y:9.75cm index:17" ;
+            mm:a_Show_name               "below" ;
+            mm:a_Sort_custom_attributes  "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Variable_scope          "global" ;
+            mm:a_Variable_type           "enumeration" ;
+            mm:a_fontcolor               "EXPR val:\"black\"" ;
+            mm:a_objectid                "EXPR val:12881" ;
+            mm:a_vizGrayscaleMode        "EXPR val:0" ;
+            mm:r_Is_inside               <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                    "Decision D" .
+    
+    <http://www.omilab.org/example#Subsequent-12885-Start_Event_BPMN-12830-T1>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Start Event (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:18" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Start_Event_BPMN-12830-Start_Event_BPMN-12830> ;
+            cv:to                           <http://www.omilab.org/example#Task_BPMN-12846-T1> .
+    
+    <http://www.omilab.org/example#Start_Event_BPMN-12838-Start_Event_BPMN-12838>
+            a                               mm:o_Start_Event_BPMN , cv:o_Modelling_object ;
+            rdfs:label                      "Start Event (BPMN)-12838" ;
+            mm:a_Abandon_after_tolerance_waiting_time
+                    "no" ;
+            mm:a_Aggregated_costs           "0" ;
+            mm:a_Aggregated_cycle_time      "00:000:00:00:00" ;
+            mm:a_Aggregated_execution_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_personnel_costs
+                    "0" ;
+            mm:a_Aggregated_resting_time    "00:000:00:00:00" ;
+            mm:a_Aggregated_transport_time  "00:000:00:00:00" ;
+            mm:a_Aggregated_waiting_time    "00:000:00:00:00" ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Collection                 "No" ;
+            mm:a_Compensation               "No" ;
+            mm:a_Conditional                "No" ;
+            mm:a_Error                      "No" ;
+            mm:a_Escalation                 "No" ;
+            mm:a_Message                    "No" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Object_type                "Information" ;
+            mm:a_Order                      "0" ;
+            mm:a_Parallel                   "No" ;
+            mm:a_Position                   "NODE x:6.75cm y:15.25cm index:6" ;
+            mm:a_Process_calendar           "D@Working day@b@32400-43200@U900;1800@45000-59400@U900;1800@Free day@c@@@$cbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbcbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbcbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbcccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbbbbbccbccbbccb" ;
+            mm:a_Quantity                   "EXPR expr:(0) val:0" ;
+            mm:a_Show_name                  "no" ;
+            mm:a_Signal                     "No" ;
+            mm:a_Sort_custom_attributes     "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Time_period                "Per year" ;
+            mm:a_Timer                      "No" ;
+            mm:a_Tolerance_waiting_time     "00:000:00:00:00" ;
+            mm:a_Type                       "Top-level" ;
+            mm:a_fontcolor                  "EXPR val:\"black\"" ;
+            mm:a_objectid                   "EXPR val:12838" ;
+            mm:a_vizGrayscaleMode           "EXPR val:0" ;
+            mm:r_Is_inside                  <http://www.omilab.org/example#Pool_BPMN-12827-Author> ;
+            cv:a_Name                       "Start Event (BPMN)-12838" .
+    
+    <http://www.omilab.org/example#End_Event_BPMN-12870-e2>
+            a                            cv:o_Modelling_object , mm:o_End_Event_BPMN ;
+            rdfs:label                   "e2" ;
+            mm:a_Auditing                "No" ;
+            mm:a_Cancel                  "No" ;
+            mm:a_Collection              "No" ;
+            mm:a_Compensation            "No" ;
+            mm:a_Error                   "No" ;
+            mm:a_Escalation              "No" ;
+            mm:a_Message                 "No" ;
+            mm:a_Monitoring              "No" ;
+            mm:a_Object_type             "Information" ;
+            mm:a_Order                   "0" ;
+            mm:a_Position                "NODE x:16cm y:8.5cm index:14" ;
+            mm:a_Show_name               "no" ;
+            mm:a_Signal                  "No" ;
+            mm:a_Sort_custom_attributes  "ITEM \"Sort custom attributes (ascending)\" param:\"\"" ;
+            mm:a_Terminate               "No" ;
+            mm:a_Type                    "local" ;
+            mm:a_fontcolor               "EXPR val:\"black\"" ;
+            mm:a_objectid                "EXPR val:12870" ;
+            mm:a_vizGrayscaleMode        "EXPR val:0" ;
+            mm:r_Is_inside               <http://www.omilab.org/example#Pool_BPMN-12824-Publisher> ;
+            cv:a_Name                    "e2" .
+    
+    <http://www.omilab.org/example#Subsequent-12904-T4-T5>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:29" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12854-T4> ;
+            cv:to                           <http://www.omilab.org/example#Task_BPMN-12858-T5> .
+    
+    <http://www.omilab.org/example#Message_Flow_BPMN-12910-T2-Author>
+            a                               cv:r_Modelling_relation_a , mm:r_Message_Flow_BPMN ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Positions                  "EDGE 0 index:33" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Show_denomination          "no" ;
+            mm:a_ToType                     "EXPR val:\"Pool (BPMN)\"" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12891-T2> ;
+            cv:to                           <http://www.omilab.org/example#Pool_BPMN-12827-Author> .
+    
+    <http://www.omilab.org/example#Subsequent-12900-T2-Decision_D>
+            a                               mm:r_Subsequent , cv:r_Modelling_relation_a ;
+            mm:a_Auditing                   "No" ;
+            mm:a_Connector_number           "0" ;
+            mm:a_Default                    "No" ;
+            mm:a_Exception                  "no" ;
+            mm:a_Expression_result          "true" ;
+            mm:a_Font_colour                "black" ;
+            mm:a_FromType                   "EXPR val:\"Task (BPMN)\"" ;
+            mm:a_Immediate                  "No" ;
+            mm:a_IsInterrupting             "no" ;
+            mm:a_IsLeaf                     "no" ;
+            mm:a_IsMulticast                "no" ;
+            mm:a_IsMultireceive             "no" ;
+            mm:a_ModelTypeExp               "EXPR val:\"Business Process Diagram (BPMN 2.0)\"" ;
+            mm:a_Monitoring                 "No" ;
+            mm:a_Positions                  "EDGE 0 index:25" ;
+            mm:a_Representation             "above/below" ;
+            mm:a_Rotate_text_by_90_degrees  "no" ;
+            mm:a_Streaming                  "no" ;
+            mm:a_Text_width                 "3" ;
+            mm:a_ToType                     "EXPR val:\"Exclusive Gateway (BPMN)\"" ;
+            mm:a_Visualization              "RELATION" ;
+            mm:a_Visualized_values          "Denomination" ;
+            cv:from                         <http://www.omilab.org/example#Task_BPMN-12891-T2> ;
+            cv:to                           <http://www.omilab.org/example#Exclusive_Gateway_BPMN-12881-Decision_D> .
+}

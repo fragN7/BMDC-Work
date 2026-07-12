@@ -1,0 +1,38 @@
+$ python3 simulate_offline.py   # protocol-identical port (sandbox has no javac/network)
+# Scenario 1: flow sensing (scenario1-flow-sensing.cfg equivalent), mesh=12000
+log|  0  lo=0.0000  hi=0.9999  live=12000  mean=0.4984  spread=0.083132  devi=0.2883
+log|  1  lo=0.0262  hi=0.9905  live=12000  mean=0.4984  spread=0.026870  devi=0.1639
+log|  2  lo=0.0404  hi=0.9373  live=12000  mean=0.4984  spread=0.011407  devi=0.1068
+log|  3  lo=0.1399  hi=0.8188  live=12000  mean=0.4984  spread=0.006327  devi=0.0795
+log|  4  lo=0.2681  hi=0.7373  live=12000  mean=0.4984  spread=0.004224  devi=0.0650
+log|  5  lo=0.2843  hi=0.7222  live=12000  mean=0.4984  spread=0.003157  devi=0.0562
+log|  6  lo=0.3246  hi=0.7222  live=12000  mean=0.4984  spread=0.002477  devi=0.0498
+log|  7  lo=0.3375  hi=0.6808  live=12000  mean=0.4984  spread=0.002006  devi=0.0448
+log|  8  lo=0.3459  hi=0.6458  live=12000  mean=0.4984  spread=0.001662  devi=0.0408
+log|  9  lo=0.3561  hi=0.6301  live=12000  mean=0.4984  spread=0.001397  devi=0.0374
+log| 10  lo=0.3570  hi=0.6175  live=12000  mean=0.4984  spread=0.001192  devi=0.0345
+log| 11  lo=0.3629  hi=0.6132  live=12000  mean=0.4984  spread=0.001024  devi=0.0320
+log| 12  lo=0.3667  hi=0.6132  live=12000  mean=0.4984  spread=0.000887  devi=0.0298
+log| 13  lo=0.3786  hi=0.5910  live=12000  mean=0.4984  spread=0.000773  devi=0.0278
+log| 14  lo=0.3928  hi=0.5890  live=12000  mean=0.4984  spread=0.000678  devi=0.0260
+log| 15  lo=0.3957  hi=0.5879  live=12000  mean=0.4984  spread=0.000591  devi=0.0243
+...
+
+# Scenario 2: adaptive rerouting (scenario2-adaptive-routing.cfg equivalent), mesh=12000
+meshlog|  0  openCount=12000  fleetSize=757780  meanLoad=0.5262  peakLoad=0.9500  lockups=0  overCapShare=0.2333
+meshlog|  1  openCount=12000  fleetSize=758015  meanLoad=0.5264  peakLoad=0.9500  lockups=0  overCapShare=0.2148
+meshlog|  2  openCount=12000  fleetSize=758241  meanLoad=0.5266  peakLoad=0.9250  lockups=0  overCapShare=0.1953
+meshlog|  3  openCount=12000  fleetSize=758435  meanLoad=0.5267  peakLoad=0.9083  lockups=0  overCapShare=0.1744
+meshlog|  4  openCount=12000  fleetSize=758618  meanLoad=0.5268  peakLoad=0.8917  lockups=0  overCapShare=0.1455
+meshlog|  5  openCount=12000  fleetSize=758760  meanLoad=0.5269  peakLoad=0.8833  lockups=0  overCapShare=0.1145
+meshlog|  6  openCount=12000  fleetSize=758890  meanLoad=0.5270  peakLoad=0.8583  lockups=0  overCapShare=0.0721
+meshlog|  7  openCount=12000  fleetSize=758986  meanLoad=0.5271  peakLoad=0.8417  lockups=0  overCapShare=0.0476
+meshlog|  8  openCount=12000  fleetSize=759048  meanLoad=0.5271  peakLoad=0.8333  lockups=0  overCapShare=0.0370
+meshlog|  9  openCount=12000  fleetSize=759101  meanLoad=0.5272  peakLoad=0.8167  lockups=0  overCapShare=0.0273
+meshlog| 10  openCount=12000  fleetSize=759140  meanLoad=0.5272  peakLoad=0.8167  lockups=0  overCapShare=0.0228
+meshlog| 11  openCount=12000  fleetSize=759200  meanLoad=0.5272  peakLoad=0.8083  lockups=0  overCapShare=0.0214
+meshlog| 12  openCount=12000  fleetSize=759225  meanLoad=0.5272  peakLoad=0.7917  lockups=0  overCapShare=0.0182
+meshlog| 13  openCount=12000  fleetSize=759258  meanLoad=0.5273  peakLoad=0.7917  lockups=0  overCapShare=0.0177
+meshlog| 14  openCount=12000  fleetSize=759237  meanLoad=0.5272  peakLoad=0.7833  lockups=0  overCapShare=0.0168
+meshlog| 15  openCount=12000  fleetSize=759237  meanLoad=0.5272  peakLoad=0.7917  lockups=0  overCapShare=0.0163
+...

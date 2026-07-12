@@ -1,0 +1,193 @@
+@base <http://example.org/sportskg#> .
+@prefix ex: <http://example.org/sportskg#> .
+@prefix data: <http://example.org/sportskg/data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:P001 a ex:Player;
+  ex:name "Marco Ivanovic";
+  ex:birthDate "2001-04-12"^^xsd:date;
+  ex:nationality "Croatia";
+  ex:playsPosition data:Midfielder;
+  ex:playsFor ex:DinamoRovira;
+  ex:hasAgent ex:Petra_Kovac;
+  ex:hasContract <Contract_P001> .
+
+ex:Petra_Kovac a ex:Agent;
+  ex:name "Petra Kovac" .
+
+ex:Contract_P001 a ex:Contract;
+  ex:contractStart "2023-07-01"^^xsd:date;
+  ex:contractEnd "2027-06-30"^^xsd:date;
+  ex:salaryEUR 1200000.0;
+  ex:contractWithClub ex:DinamoRovira .
+
+data:P002 a ex:Player;
+  ex:name "Sami Okoro";
+  ex:birthDate "1998-11-02"^^xsd:date;
+  ex:nationality "Nigeria";
+  ex:playsPosition data:Forward;
+  ex:playsFor ex:DinamoRovira;
+  ex:hasAgent ex:Petra_Kovac;
+  ex:hasContract <Contract_P002> .
+
+ex:Contract_P002 a ex:Contract;
+  ex:contractStart "2022-01-15"^^xsd:date;
+  ex:contractEnd "2026-12-31"^^xsd:date;
+  ex:salaryEUR 2500000.0;
+  ex:contractWithClub ex:DinamoRovira .
+
+data:P003 a ex:Player;
+  ex:name "Luca Bianchi";
+  ex:birthDate "2003-02-20"^^xsd:date;
+  ex:nationality "Italy";
+  ex:playsPosition data:Defender;
+  ex:playsFor ex:DinamoRovira;
+  ex:hasAgent ex:Renzo_Fabbri;
+  ex:hasContract <Contract_P003> .
+
+ex:Renzo_Fabbri a ex:Agent;
+  ex:name "Renzo Fabbri" .
+
+ex:Contract_P003 a ex:Contract;
+  ex:contractStart "2024-08-01"^^xsd:date;
+  ex:contractEnd "2028-07-31"^^xsd:date;
+  ex:salaryEUR 600000.0;
+  ex:contractWithClub ex:DinamoRovira .
+
+data:P004 a ex:Player;
+  ex:name "Tomas Nowak";
+  ex:birthDate "1999-06-30"^^xsd:date;
+  ex:nationality "Poland";
+  ex:playsPosition data:Goalkeeper;
+  ex:playsFor ex:VardarUnited;
+  ex:hasAgent ex:Renzo_Fabbri;
+  ex:hasContract <Contract_P004> .
+
+ex:Contract_P004 a ex:Contract;
+  ex:contractStart "2021-09-01"^^xsd:date;
+  ex:contractEnd "2026-08-31"^^xsd:date;
+  ex:salaryEUR 900000.0;
+  ex:contractWithClub ex:VardarUnited .
+
+data:P005 a ex:Player;
+  ex:name "Erik Solheim";
+  ex:birthDate "2000-09-14"^^xsd:date;
+  ex:nationality "Norway";
+  ex:playsPosition data:Midfielder;
+  ex:playsFor ex:VardarUnited;
+  ex:hasAgent ex:Ingrid_Haugen;
+  ex:hasContract <Contract_P005> .
+
+ex:Ingrid_Haugen a ex:Agent;
+  ex:name "Ingrid Haugen" .
+
+ex:Contract_P005 a ex:Contract;
+  ex:contractStart "2023-01-10"^^xsd:date;
+  ex:contractEnd "2026-06-30"^^xsd:date;
+  ex:salaryEUR 1100000.0;
+  ex:contractWithClub ex:VardarUnited .
+
+data:P006 a ex:Player;
+  ex:name "David Alaba-Ferreira";
+  ex:birthDate "2002-12-05"^^xsd:date;
+  ex:nationality "Portugal";
+  ex:playsPosition data:Defender;
+  ex:playsFor ex:VardarUnited;
+  ex:hasAgent ex:Ingrid_Haugen;
+  ex:hasContract <Contract_P006> .
+
+ex:Contract_P006 a ex:Contract;
+  ex:contractStart "2022-07-01"^^xsd:date;
+  ex:contractEnd "2027-06-30"^^xsd:date;
+  ex:salaryEUR 1800000.0;
+  ex:contractWithClub ex:VardarUnited .
+
+data:P007 a ex:Player;
+  ex:name "Yusuf Demir";
+  ex:birthDate "2004-03-22"^^xsd:date;
+  ex:nationality "Turkey";
+  ex:playsPosition data:Forward;
+  ex:playsFor ex:KarpatyLviv;
+  ex:hasAgent ex:Petra_Kovac;
+  ex:hasContract <Contract_P007> .
+
+ex:Contract_P007 a ex:Contract;
+  ex:contractStart "2024-01-01"^^xsd:date;
+  ex:contractEnd "2029-12-31"^^xsd:date;
+  ex:salaryEUR 700000.0;
+  ex:contractWithClub ex:KarpatyLviv .
+
+data:P008 a ex:Player;
+  ex:name "Ivan Petrov";
+  ex:birthDate "1997-05-18"^^xsd:date;
+  ex:nationality "Bulgaria";
+  ex:playsPosition data:Midfielder;
+  ex:playsFor ex:KarpatyLviv;
+  ex:hasAgent ex:Renzo_Fabbri;
+  ex:hasContract <Contract_P008> .
+
+ex:Contract_P008 a ex:Contract;
+  ex:contractStart "2020-07-01"^^xsd:date;
+  ex:contractEnd "2026-06-30"^^xsd:date;
+  ex:salaryEUR 1500000.0;
+  ex:contractWithClub ex:KarpatyLviv .
+
+data:P009 a ex:Player;
+  ex:name "Marek Kovacs";
+  ex:birthDate "2005-01-09"^^xsd:date;
+  ex:nationality "Hungary";
+  ex:playsPosition data:Forward;
+  ex:playsFor ex:KarpatyLviv;
+  ex:hasAgent ex:Ingrid_Haugen;
+  ex:hasContract <Contract_P009> .
+
+ex:Contract_P009 a ex:Contract;
+  ex:contractStart "2023-09-01"^^xsd:date;
+  ex:contractEnd "2028-08-31"^^xsd:date;
+  ex:salaryEUR 500000.0;
+  ex:contractWithClub ex:KarpatyLviv .
+
+data:P010 a ex:Player;
+  ex:name "Nikolai Volkov";
+  ex:birthDate "1996-08-08"^^xsd:date;
+  ex:nationality "Russia";
+  ex:playsPosition data:Defender;
+  ex:playsFor ex:SteauaContinental;
+  ex:hasAgent ex:Petra_Kovac;
+  ex:hasContract <Contract_P010> .
+
+ex:Contract_P010 a ex:Contract;
+  ex:contractStart "2019-07-01"^^xsd:date;
+  ex:contractEnd "2026-06-30"^^xsd:date;
+  ex:salaryEUR 2000000.0;
+  ex:contractWithClub ex:SteauaContinental .
+
+data:P011 a ex:Player;
+  ex:name "Andres Silva";
+  ex:birthDate "2001-10-30"^^xsd:date;
+  ex:nationality "Spain";
+  ex:playsPosition data:Midfielder;
+  ex:playsFor ex:SteauaContinental;
+  ex:hasAgent ex:Renzo_Fabbri;
+  ex:hasContract <Contract_P011> .
+
+ex:Contract_P011 a ex:Contract;
+  ex:contractStart "2023-02-01"^^xsd:date;
+  ex:contractEnd "2027-01-31"^^xsd:date;
+  ex:salaryEUR 1300000.0;
+  ex:contractWithClub ex:SteauaContinental .
+
+data:P012 a ex:Player;
+  ex:name "Bjorn Eriksen";
+  ex:birthDate "2003-07-04"^^xsd:date;
+  ex:nationality "Sweden";
+  ex:playsPosition data:Goalkeeper;
+  ex:playsFor ex:SteauaContinental;
+  ex:hasAgent ex:Ingrid_Haugen;
+  ex:hasContract <Contract_P012> .
+
+ex:Contract_P012 a ex:Contract;
+  ex:contractStart "2024-07-01"^^xsd:date;
+  ex:contractEnd "2029-06-30"^^xsd:date;
+  ex:salaryEUR 650000.0;
+  ex:contractWithClub ex:SteauaContinental .

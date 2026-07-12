@@ -1,0 +1,15 @@
+Scenario 1 - flow sensing
+  mesh size 1200: final devi=0.005642
+  mesh size 12000: final devi=0.004997
+  mesh size 120000: final devi=0.004968
+Scenario 2 - adaptive rerouting
+  mesh size 1200: overCapShare 0.2375 -> 0.0033 | arrived=954 divertShare=0.2338 avgHops=5.97
+  mesh size 12000: overCapShare 0.2333 -> 0.0030 | arrived=9429 divertShare=0.2541 avgHops=6.19
+  mesh size 120000: overCapShare 0.2306 -> 0.0033 | arrived=94371 divertShare=0.2492 avgHops=6.18
+Scenario 3 - disruption resilience
+  rate=0.01: settled devi=0.0250
+  rate=0.02: settled devi=0.0342
+  rate=0.05: settled devi=0.0521
+  rate=0.1: settled devi=0.0687
+  rate=0.2: settled devi=0.0874
+Done. Results written to /home/claude/UrbanFlow-TrafficNav-BigData/results
